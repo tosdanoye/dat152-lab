@@ -7,7 +7,7 @@ For this lab, you will extend the library service to include two additional feat
 2.	Delete Book
 
 Preambles: Clone the repository `https://github.com/tosdanoye/dat152-lab.git`
-For this exercise, [library-flowmanager](library-flowmanager) (same as demo-library-flowmanager). Then, import the maven project into your preferred IDE. Add the project to your Apache Tomcat server 10.1.x. Start your server and point your url to “http://localhost:8080/library” (default server port=8080)
+For this exercise, [library-flowmanager](library-flowmanager) (same as [demo-library-flowmanager](demo/library-flowmanager)). Then, import the maven project into your preferred IDE. Add the project to your Apache Tomcat server 10.1.x. Start your server and point your url to “http://localhost:8080/library” (default server port=8080)
 
 ### Task 1: Add Author: (You can use the AuthorDAO (no.hvl.dat152.dao) for database access)
 You need to update/create:
