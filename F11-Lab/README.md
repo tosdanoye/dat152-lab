@@ -37,7 +37,7 @@ You need to update/create
 ## Part B – Security features (Optional)
 Secure admin pages (e.g., add Book, add Author, update Book, delete Book) from non-admin users.
 
-Preambles: Download and unzip Lab1b.zip. Then, import the maven project into your preferred IDE. Add the project to your Apache Tomcat server 10.1.x. Start your server and point your url to “http://localhost:8080/library” 
+For this exercise, you will use the [library-flowmanager-auth](library-flowmanager-auth) project. Then, import the maven project into your preferred IDE. Add the project to your Apache Tomcat server 10.1.x. Start your server and point your url to “http://localhost:8080/library” 
 
 Two users are created during initialization:
 -	username=admin, password=password, role=ADMIN
