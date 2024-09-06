@@ -7,30 +7,30 @@ For this lab, you will extend the library service to include two additional feat
 2.	Delete Book
 
 Preambles: Clone the repository `https://github.com/tosdanoye/dat152-lab.git`
-For this exercise, [library-flowmanager](F11-Lab/library-flowmanager) (same as demo-library-flowmanager). Then, import the maven project into your preferred IDE. Add the project to your Apache Tomcat server 10.1.x. Start your server and point your url to “http://localhost:8080/library” (default server port=8080)
+For this exercise, [library-flowmanager](library-flowmanager) (same as demo-library-flowmanager). Then, import the maven project into your preferred IDE. Add the project to your Apache Tomcat server 10.1.x. Start your server and point your url to “http://localhost:8080/library” (default server port=8080)
 
 ### Task 1: Add Author: (You can use the AuthorDAO (no.hvl.dat152.dao) for database access)
 You need to update/create:
-a.	index.jsp
--	include the href command for the GET requests (e.g., `<a href="do/addauthorform">Add Author</a>`)
-b.	View (addauthor.jsp)
--	Include the form action for the POST requests (e.g., `<form action="addauthor" method="post">`)
-c.	Create the actions (GET and POST) in the “no.hvl.dat152.action” package
--	AddAuthorFormAction.java
--	AddAuthorAction.java
-d.	Update the Map in FlowManager.java in the “no.hvl.dat152.controller” package to map the commands with their corresponding pages (views)
-e.	Update the Map in the createActionsMap() method of the FrontController.java class to map the commands with their corresponding actions.
+1.	index.jsp
+	-	include the href command for the GET requests (e.g., `<a href="do/addauthorform">Add Author</a>`)
+2.	View (addauthor.jsp)
+	-	Include the form action for the POST requests (e.g., `<form action="addauthor" method="post">`)
+3.	Create the actions (GET and POST) in the “no.hvl.dat152.action” package
+	-	AddAuthorFormAction.java
+	-	AddAuthorAction.java
+4.	Update the Map in FlowManager.java in the “no.hvl.dat152.controller” package to map the commands with their corresponding pages (views)
+5.	Update the Map in the createActionsMap() method of the FrontController.java class to map the commands with their corresponding actions.
 
 ### Task 2: Delete Book
 You need to update/create
-a.	viewbooks.jsp
--	include hyperlink (href) to the command (deletebookform) for the GET requests.
-b.	deletebook.jsp
--	include the href to the command (deletebook) for the delete action 
-c.	Create the action (GET) in the “no.hvl.dat152.action” package
--	DeleteBookAction.java
-d.	Update the Map in FlowManager.java in the “no.hvl.dat152.controller” package to map the commands with their corresponding pages (views). You can, for example map the “deletebook” command to “viewbooks.jsp”. Means that when the delete action is completed, the viewbooks will be displayed. 
-e.	Update the Map in the createActionsMap() method of the FrontController.java class to map the commands with their corresponding actions.
+1.	viewbooks.jsp
+	-	include hyperlink (href) to the command (deletebookform) for the GET requests.
+2.	deletebook.jsp
+	-	include the href to the command (deletebook) for the delete action 
+3.	Create the action (GET) in the “no.hvl.dat152.action” package
+	-	DeleteBookAction.java
+4.	Update the Map in FlowManager.java in the “no.hvl.dat152.controller” package to map the commands with their corresponding pages (views). You can, for example map the “deletebook” command to “viewbooks.jsp”. Means that when the delete action is completed, the viewbooks will be displayed. 
+5.	Update the Map in the createActionsMap() method of the FrontController.java class to map the commands with their corresponding actions.
 
 
 ## Part B – Security features (Optional)
