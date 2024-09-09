@@ -4,6 +4,9 @@
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
+  <listener>
+  	<listener-class>no.hvl.dat152.util.MyContextListener</listener-class>
+  </listener>
   <servlet>
     <description></description>
     <display-name>FrontController</display-name>
