@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Home Page</title>
+</head>
+<body>
+	<div th:fragment="header">
+		<h1>Welcome to e-Library (Powered by Spring Web MVC)</h1>
+	</div>
+	<div class="text-left" th:fragment="menu">
+		<p>
+			<a href="/">Home</a> | <a href="/viewbooks">View Books</a> | 
+			<a href="/addbook">Add Book</a> |
+			<a href="http://spring.io" target="_blank">Spring Framework</a> | 
+            <a href="https://www.thymeleaf.org/documentation.html" target="_blank">Thymeleaf</a>
+		</p>
+		
+	</div>
+</body>
+</html>
