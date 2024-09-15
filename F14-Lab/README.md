@@ -6,6 +6,7 @@ For this lab, you will extend the library service built with the Spring Web MVC 
 2.	Delete Book
 
 Preambles: Clone the repository `https://github.com/tosdanoye/dat152-lab.git` (if you have not done it before) or update the repository to download the new project.
+
 For the exercises, you will use the [library-spring-mvc-thymeleaf](library-spring-mvc-thymeleaf) project. Then, import the maven project into your preferred IDE.
 Check the port (server.port) configured in the [application.properties](library-spring-mvc-thymeleaf/src/main/resources/application.properties) and also familiarise yourself with other configuration properties.
 
