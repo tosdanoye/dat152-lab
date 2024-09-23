@@ -26,7 +26,7 @@ You can change the port and other settings in the ‘application.properties’ f
 ## Testing your REST APIs
 -	You will need Postman to test your APIs.
 
-![](fig/postman.pdf)
+![](fig/postman.png)
 
 -	Alternatively, you can use the ‘curl’ tool/command from a terminal.
 `curl -X GET http://localhost:8090/elibrary/api/v1/books`
