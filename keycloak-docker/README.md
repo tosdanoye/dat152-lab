@@ -11,8 +11,11 @@ docker run --name keycloak_unoptimized -p 8080:8080 \
         start-dev --import-realm
 ```
 Keycloak can then be accessed at: `http://localhost:8080`
+
 Log in as the `admin` user to access the Keycloak Administration Console. Username is `admin` and password `admin`.
+
 The [realm configuration file](keycloak/imports/SpringBootKeycloak-realm.json) will create a new realm called `SpringBootKeycloak` including clients (elibrary-rest-api and order-client), client scopes and 2 realm roles (USER and ADMIN).
+
 The [realm user configuration file](keycloak/imports/SpringBootKeycloak-users-0.json)  will create 2 users (`robert` and `berit`). The default password for each user is the name\_pwd (e.g., robert\_pwd).
 
 
