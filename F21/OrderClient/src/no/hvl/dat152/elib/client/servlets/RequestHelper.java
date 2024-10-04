@@ -46,6 +46,7 @@ public class RequestHelper {
 	 */
 	public static String doOrder(String accesstoken) {
 		
+//		HttpClient http = new HttpClient(Constants.USER_ENDPOINT);
 		HttpClient http = new HttpClient(Constants.REST_ORDER_ENDPOINT);
 		
 		http.setContentType("application/json; charset=utf-8");

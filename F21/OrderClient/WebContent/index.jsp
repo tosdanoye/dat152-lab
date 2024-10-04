@@ -21,6 +21,12 @@
 <tr>
 <td><h5>Expiry</h5></td><td><input type="text" name="expiry" value="" size=12></td>
 </tr>
+<!-- 
+				<tr>
+					<td><h5><fmt:message key="userid" /></h5></td>
+					<td><input type="text" name="userid" value="" size=3></td>
+				</tr>
+ -->
 <tr>
 <td><input type="hidden" name="response_type" value="code"></td>
 <td><input type="hidden" name="scope" value="openid phone profile"></td>

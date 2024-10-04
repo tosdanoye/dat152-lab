@@ -32,7 +32,10 @@ public class SSOForwarder extends HttpServlet {
 		
 		String isbn = request.getParameter("isbn");
 		String expiry = request.getParameter("expiry");
-
+		
+//		String userid = request.getParameter("userid");
+//
+//		Constants.USER_ENDPOINT += userid + "/orders"; 
 		Constants.JSON_DATA = "{\"isbn\":\""+isbn+"\",\"expiry\":\""+expiry+"\"}";
 		System.out.println(Constants.JSON_DATA);
 		

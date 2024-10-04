@@ -9,7 +9,7 @@ package no.hvl.dat152.elib.client;
 public class Constants {
 
 	public static String CLIENT_ID = "order-client";											// this is the id you created on Keycloak Identity Provider
-	public static String CLIENT_SECRET = "pQ8XGXOPNMrX4ETi6HBOmJlDuRJHCEhZ";					// this is issued to the client by the identity Provider during registration
+	public static String CLIENT_SECRET = "pQ8XGXOPNMrX4ETi6HBOmJlDuRJHCEhZ";					// this is issued to the client by the Keycloak identity Provider during registration
 	
 	public static final String STATE = "abcdef";		// this should be a secure random number (not used in this example)
 	
@@ -29,7 +29,7 @@ public class Constants {
 	
 	// REST API for order Resource endpoints
 	public static final String REST_ORDER_ENDPOINT = "http://localhost:8090/elibrary/api/v1/orders";
-	public static final String USER_ENDPOINT = "http://localhost:8090/elibrary/api/v1/users/";
+	public static String USER_ENDPOINT = "http://localhost:8090/elibrary/api/v1/users/";
 	public static String JSON_DATA = "";
 	
 }
