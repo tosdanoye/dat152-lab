@@ -6,7 +6,7 @@ Then, import the maven project into your preferred IDE. Add the project to your 
 
 
 ## Task 1 - I18N
-Design a 2-page web application that is internationalized and localized to NO and EN.
+Design a 2-page web application that is internationalized and localized to EN and any other language of your choice (NO, DE, ES, ...).
 
 The page will provide description of DAT152 course and information about exam as shown below.
 - Clicking “Course Description” should display page 2
