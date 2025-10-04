@@ -14,13 +14,13 @@ Keycloak can then be accessed at: `http://localhost:8080`
 
 Log in as the `admin` user to access the Keycloak Administration Console. Username is `admin` and password `admin`.
 
-The [realm configuration file](keycloak/imports/SpringBootKeycloak-realm.json) will create a new realm called `SpringBootKeycloak` including clients (elibrary-rest-api and order-client), client scopes and 2 realm roles (USER and ADMIN).
+The [realm configuration file](keycloak/imports/DAT152-realm.json) will create a new realm called `DAT152` including clients (dat152oblig2), client scopes and 2 client roles (USER and ADMIN).
 
-The [realm user configuration file](keycloak/imports/SpringBootKeycloak-users-0.json)  will create 2 users (`robert` and `berit`). The default password for each user is the name\_pwd (e.g., robert\_pwd).
+The [realm user configuration file](keycloak/imports/DAT152-users-0.json)  will create 3 users (`user1`. `user2` and `user3`). The default password for each user is the name (e.g., user1).
 
 
 You can then obtain an auth JWT bearer token by using curl as below (Linux/Mac) or any other relevant client (e.g., Postman):
 
 ```shell
-curl -X POST http://localhost:8080/realms/SpringBootKeycloak/protocol/openid-connect/token -d 'client_id=elibrary-rest-api' -d 'username=admin_user&password=berit_pwd&grant_type=password'
+curl -X POST http://localhost:8080/realms/DAT152/protocol/openid-connect/token -d 'client_id=dat152oblig2' -d 'username=user1&password=user1&grant_type=password'
 ```
