@@ -1,6 +1,45 @@
 {
   "realm" : "DAT152",
   "users" : [ {
+    "id" : "8bf0e66a-c661-44ab-8c8c-4c44c8899ab5",
+    "username" : "service-account-dat152webssoapp",
+    "emailVerified" : false,
+    "enabled" : true,
+    "createdTimestamp" : 1759843460568,
+    "totp" : false,
+    "serviceAccountClientId" : "dat152WebSSOApp",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-dat152" ],
+    "clientRoles" : {
+      "dat152WebSSOApp" : [ "uma_protection" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "337777ee-e5ba-4de7-b2bc-cc733e101daa",
+    "username" : "tosin.oyetoyan@gmail.com",
+    "firstName" : "T",
+    "lastName" : "Oy",
+    "email" : "tosin.oyetoyan@gmail.com",
+    "emailVerified" : false,
+    "enabled" : true,
+    "createdTimestamp" : 1760010723943,
+    "totp" : false,
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-dat152" ],
+    "clientConsents" : [ {
+      "clientId" : "dat152WebSSOApp",
+      "grantedClientScopes" : [ "email", "profile", "dat152WebSSOApp", "roles" ],
+      "createdDate" : 1760010734176,
+      "lastUpdatedDate" : 1760010734198
+    } ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
     "id" : "1ba8ff98-22e2-4607-8972-4e851cd0f6ca",
     "username" : "user1",
     "firstName" : "User1_Firstname",
@@ -21,8 +60,15 @@
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
     "clientRoles" : {
-      "dat152oblig2" : [ "USER" ]
+      "dat152oblig2" : [ "USER" ],
+      "dat152WebSSOApp" : [ "USER" ]
     },
+    "clientConsents" : [ {
+      "clientId" : "dat152WebSSOApp",
+      "grantedClientScopes" : [ "email", "profile", "dat152WebSSOApp", "roles" ],
+      "createdDate" : 1759840856912,
+      "lastUpdatedDate" : 1759846666513
+    } ],
     "notBefore" : 0,
     "groups" : [ ]
   }, {
@@ -46,8 +92,15 @@
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
     "clientRoles" : {
-      "dat152oblig2" : [ "ADMIN" ]
+      "dat152oblig2" : [ "ADMIN" ],
+      "dat152WebSSOApp" : [ "ADMIN" ]
     },
+    "clientConsents" : [ {
+      "clientId" : "dat152WebSSOApp",
+      "grantedClientScopes" : [ "email", "profile", "dat152WebSSOApp", "roles" ],
+      "createdDate" : 1759863048237,
+      "lastUpdatedDate" : 1759863048246
+    } ],
     "notBefore" : 0,
     "groups" : [ ]
   }, {
@@ -73,6 +126,12 @@
     "clientRoles" : {
       "dat152oblig2" : [ "USER" ]
     },
+    "clientConsents" : [ {
+      "clientId" : "dat152WebSSOApp",
+      "grantedClientScopes" : [ "email", "profile", "dat152WebSSOApp", "roles" ],
+      "createdDate" : 1759863344287,
+      "lastUpdatedDate" : 1759863344300
+    } ],
     "notBefore" : 0,
     "groups" : [ ]
   }, {
@@ -98,6 +157,12 @@
     "clientRoles" : {
       "dat152oblig2" : [ "USER" ]
     },
+    "clientConsents" : [ {
+      "clientId" : "dat152WebSSOApp",
+      "grantedClientScopes" : [ "email", "profile", "dat152WebSSOApp", "roles" ],
+      "createdDate" : 1759871891696,
+      "lastUpdatedDate" : 1759871891747
+    } ],
     "notBefore" : 0,
     "groups" : [ ]
   } ]

@@ -275,6 +275,30 @@
         "containerId" : "90adec0a-3379-4894-a635-a3a947b24ddf",
         "attributes" : { }
       } ],
+      "dat152WebSSOApp" : [ {
+        "id" : "37191ba2-a914-4828-ab31-79f992a9b97d",
+        "name" : "USER",
+        "description" : "User role",
+        "composite" : false,
+        "clientRole" : true,
+        "containerId" : "d6c8eded-eb7e-40d2-950a-a58b559c382e",
+        "attributes" : { }
+      }, {
+        "id" : "85b8737a-60e1-452e-a9c5-07635bde2f50",
+        "name" : "ADMIN",
+        "description" : "Admin role",
+        "composite" : false,
+        "clientRole" : true,
+        "containerId" : "d6c8eded-eb7e-40d2-950a-a58b559c382e",
+        "attributes" : { }
+      }, {
+        "id" : "b8a5a9fa-c54a-4c96-885e-c35591dc2a20",
+        "name" : "uma_protection",
+        "composite" : false,
+        "clientRole" : true,
+        "containerId" : "d6c8eded-eb7e-40d2-950a-a58b559c382e",
+        "attributes" : { }
+      } ],
       "account" : [ {
         "id" : "fe55a56a-3323-421b-b6bd-070bca2f559d",
         "name" : "view-profile",
@@ -531,6 +555,98 @@
     "nodeReRegistrationTimeout" : 0,
     "defaultClientScopes" : [ "web-origins", "acr", "profile", "roles", "basic", "email" ],
     "optionalClientScopes" : [ "address", "phone", "offline_access", "organization", "microprofile-jwt" ]
+  }, {
+    "id" : "d6c8eded-eb7e-40d2-950a-a58b559c382e",
+    "clientId" : "dat152WebSSOApp",
+    "name" : "Web App for SSO with Authorization code flow demo",
+    "description" : "",
+    "rootUrl" : "http://localhost:9090/",
+    "adminUrl" : "http://localhost:9090/",
+    "baseUrl" : "http://localhost:9090/",
+    "surrogateAuthRequired" : false,
+    "enabled" : true,
+    "alwaysDisplayInConsole" : false,
+    "clientAuthenticatorType" : "client-secret",
+    "secret" : "TaGvie5TidfoejCts6CC8II7UbWxTs1j",
+    "redirectUris" : [ "http://localhost:9090/*" ],
+    "webOrigins" : [ "http://localhost:9090" ],
+    "notBefore" : 0,
+    "bearerOnly" : false,
+    "consentRequired" : true,
+    "standardFlowEnabled" : true,
+    "implicitFlowEnabled" : false,
+    "directAccessGrantsEnabled" : true,
+    "serviceAccountsEnabled" : true,
+    "authorizationServicesEnabled" : true,
+    "publicClient" : false,
+    "frontchannelLogout" : true,
+    "protocol" : "openid-connect",
+    "attributes" : {
+      "request.object.signature.alg" : "any",
+      "frontchannel.logout.session.required" : "true",
+      "oauth2.device.authorization.grant.enabled" : "false",
+      "use.jwks.url" : "false",
+      "backchannel.logout.revoke.offline.tokens" : "false",
+      "use.refresh.tokens" : "true",
+      "realm_client" : "false",
+      "oidc.ciba.grant.enabled" : "false",
+      "backchannel.logout.session.required" : "true",
+      "client_credentials.use_refresh_token" : "false",
+      "require.pushed.authorization.requests" : "false",
+      "request.object.encryption.enc" : "any",
+      "dpop.bound.access.tokens" : "false",
+      "id.token.as.detached.signature" : "false",
+      "client.secret.creation.time" : "1759834317",
+      "request.object.encryption.alg" : "any",
+      "client.introspection.response.allow.jwt.claim.enabled" : "false",
+      "standard.token.exchange.enabled" : "false",
+      "login_theme" : "keycloak.v2",
+      "client.use.lightweight.access.token.enabled" : "false",
+      "request.object.required" : "not required",
+      "access.token.header.type.rfc9068" : "false",
+      "tls.client.certificate.bound.access.tokens" : "false",
+      "acr.loa.map" : "{}",
+      "display.on.consent.screen" : "true",
+      "token.response.type.bearer.lower-case" : "false"
+    },
+    "authenticationFlowBindingOverrides" : { },
+    "fullScopeAllowed" : true,
+    "nodeReRegistrationTimeout" : -1,
+    "defaultClientScopes" : [ "web-origins", "service_account", "acr", "profile", "roles", "basic", "email" ],
+    "optionalClientScopes" : [ "address", "phone", "offline_access", "organization", "microprofile-jwt" ],
+    "authorizationSettings" : {
+      "allowRemoteResourceManagement" : true,
+      "policyEnforcementMode" : "ENFORCING",
+      "resources" : [ {
+        "name" : "Default Resource",
+        "type" : "urn:dat152WebSSOApp:resources:default",
+        "ownerManagedAccess" : false,
+        "attributes" : { },
+        "uris" : [ "/*" ]
+      } ],
+      "policies" : [ {
+        "name" : "Default Policy",
+        "description" : "A policy that grants access only for users within this realm",
+        "type" : "js",
+        "logic" : "POSITIVE",
+        "decisionStrategy" : "AFFIRMATIVE",
+        "config" : {
+          "code" : "// by default, grants any permission associated with this policy\n$evaluation.grant();\n"
+        }
+      }, {
+        "name" : "Default Permission",
+        "description" : "A permission that applies to the default resource type",
+        "type" : "resource",
+        "logic" : "POSITIVE",
+        "decisionStrategy" : "UNANIMOUS",
+        "config" : {
+          "defaultResourceType" : "urn:dat152WebSSOApp:resources:default",
+          "applyPolicies" : "[\"Default Policy\"]"
+        }
+      } ],
+      "scopes" : [ ],
+      "decisionStrategy" : "UNANIMOUS"
+    }
   }, {
     "id" : "836ed13b-735f-4831-91e1-44e5f5809a62",
     "clientId" : "dat152oblig2",
@@ -1356,6 +1472,17 @@
       }
     } ],
     "org.keycloak.keys.KeyProvider" : [ {
+      "id" : "7e744f0b-0e33-4e76-af72-5353c957a268",
+      "name" : "fallback-HS256",
+      "providerId" : "hmac-generated",
+      "subComponents" : { },
+      "config" : {
+        "kid" : [ "e5f9fca4-74fa-42e3-b46e-d72c050ae475" ],
+        "secret" : [ "ZPGRbsWWnLk9XQi1ntWdq9M_6PEsM8ElGdPbrlsgEmGWwL7fQvqz9SH2GU7DvOhMI7hvnc3sjzRBw6hk_Gh6G-cwL28hwtdKbBnbrhrWfqo_SH0PXvhMfaFiZMhfC2Vgu9bi0vGtEpwDaxmiFrIm-0-uy5riPNYCqStMTDhs4yo" ],
+        "priority" : [ "-100" ],
+        "algorithm" : [ "HS256" ]
+      }
+    }, {
       "id" : "ebc20e17-c36c-4f01-99ce-f3c5da3d58b5",
       "name" : "rsa-generated",
       "providerId" : "rsa-generated",
